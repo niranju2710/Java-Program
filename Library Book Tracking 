@@ -1,0 +1,33 @@
+class Book {
+    String title;
+    String author;
+    boolean available;
+
+    Book(String t, String a) {
+        title = t;
+        author = a;
+        available = true;
+    }
+
+    void issueBook() {
+        if (available) {
+            available = false;
+            System.out.println("Book Issued Successfully");
+        } else {
+            System.out.println("Book Not Available");
+        }
+    }
+
+    void display() {
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("Available: " + available);
+    }
+
+    public static void main(String[] args) {
+        Book b1 = new Book("Java Basics", "James");
+        b1.display();
+        b1.issueBook();
+        b1.display();
+    }
+}
