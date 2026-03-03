@@ -1,0 +1,20 @@
+import java.util.Scanner;
+class Cart {
+    double itemPrice;
+    int quantity;
+    double totalCost() {
+        double total = itemPrice * quantity;
+        if (total > 5000) total *= 0.9; // 10% discount
+        return total;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Cart c = new Cart();
+        c.itemPrice = sc.nextDouble();
+        c.quantity = sc.nextInt();
+        System.out.println(c.totalCost());
+        sc.close();
+    }
+}
