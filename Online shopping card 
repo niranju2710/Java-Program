@@ -1,0 +1,22 @@
+class ShoppingCart {
+    String item;
+    int quantity;
+    double price;
+
+    ShoppingCart(String item, int quantity, double price) {
+        this.item = item;
+        this.quantity = quantity;
+        this.price = price;
+    }
+
+    void calculateTotal() {
+        double total = quantity * price;
+        System.out.println("Item: " + item);
+        System.out.println("Total Cost: ₹" + total);
+    }
+
+    public static void main(String[] args) {
+        ShoppingCart c1 = new ShoppingCart("Shoes", 2, 1500);
+        c1.calculateTotal();
+    }
+}
