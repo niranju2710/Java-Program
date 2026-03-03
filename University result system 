@@ -1,0 +1,30 @@
+class Student {
+    String name;
+    int m1, m2, m3;
+
+    Student(String name, int m1, int m2, int m3) {
+        this.name = name;
+        this.m1 = m1;
+        this.m2 = m2;
+        this.m3 = m3;
+    }
+
+    void calculateResult() {
+        int total = m1 + m2 + m3;
+        double avg = total / 3.0;
+
+        System.out.println("Name: " + name);
+        System.out.println("Total: " + total);
+        System.out.println("Average: " + avg);
+
+        if (avg >= 50)
+            System.out.println("Result: Pass");
+        else
+            System.out.println("Result: Fail");
+    }
+
+    public static void main(String[] args) {
+        Student s1 = new Student("Priya", 80, 70, 60);
+        s1.calculateResult();
+    }
+}
