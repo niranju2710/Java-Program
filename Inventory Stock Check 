@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class InventoryStock {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int stock = 50;  // Available stock
+        System.out.print("Enter quantity required: ");
+        int required = sc.nextInt();
+
+        if (required <= stock)
+            System.out.println("Stock Available");
+        else
+            System.out.println("Out of Stock");
+
+        sc.close();
+    }
+}
