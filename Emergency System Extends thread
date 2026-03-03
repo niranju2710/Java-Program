@@ -1,0 +1,17 @@
+class EmergencySystem extends Thread {
+    boolean emergency = true;   // Simulated emergency flag
+    public void run() {
+        try {
+            while (emergency) {
+                System.out.println("⚠ EMERGENCY ALERT! Take immediate action!");
+                Thread.sleep(3000); // 3 seconds
+            }
+        } catch (InterruptedException e) {
+            System.out.println("Emergency system interrupted");
+        }
+    }
+    public static void main(String[] args) {
+        EmergencySystem es = new EmergencySystem();
+        es.start();
+    }
+}
