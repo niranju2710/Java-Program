@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class OnlineExam {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int score = 0;
+        char answer;
+
+        System.out.println("Online Exam Started");
+
+        // Question 1
+        System.out.println("1. Java is?");
+        System.out.println("a) Language  b) Animal  c) Car");
+        answer = sc.next().charAt(0);
+        if(answer == 'a')
+            score++;
+
+        // Question 2
+        System.out.println("2. OOP stands for?");
+        System.out.println("a) Object Oriented Programming  b) Online Open Program  c) None");
+        answer = sc.next().charAt(0);
+        if(answer == 'a')
+            score++;
+
+        // Question 3
+        System.out.println("3. Which keyword is used for inheritance?");
+        System.out.println("a) this  b) super  c) extends");
+        answer = sc.next().charAt(0);
+        if(answer == 'c')
+            score++;
+
+        System.out.println("Exam Finished!");
+        System.out.println("Your Score: " + score + "/3");
+    }
+}
