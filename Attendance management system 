@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class AttendanceSystem {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int totalStudents;
+        int present = 0;
+
+        System.out.print("Enter total number of students: ");
+        totalStudents = sc.nextInt();
+
+        for(int i = 1; i <= totalStudents; i++) {
+            System.out.print("Is student " + i + " present? (1=Yes, 0=No): ");
+            int status = sc.nextInt();
+
+            if(status == 1) {
+                present++;
+            }
+        }
+
+        int absent = totalStudents - present;
+
+        System.out.println("Total Present: " + present);
+        System.out.println("Total Absent: " + absent);
+    }
+}
